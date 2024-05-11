@@ -66,5 +66,10 @@ public class TypeTroop
     public bool getIsFriendly() { return IsFriendly; }
     public bool getAoE() { return AoE; }
 
+    /*public controller GetAnimator()
+    {
+        return gameObject.GetComponent<Animation>();
+    }*/
+
   
 }

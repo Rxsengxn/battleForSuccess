@@ -68,7 +68,7 @@ public class EnemyBase : Destructables
     
 
     // /public List<GameObject> collidedObjects = new List<GameObject>();
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // /
         /*GameObject collisionObj = collision.gameObject;
@@ -100,7 +100,7 @@ public class EnemyBase : Destructables
     }
 
 
-    private void OnTriggerStay(Collider collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         
         // /

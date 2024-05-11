@@ -14,6 +14,7 @@ public class Troop : Destructables
     //private GameObject GameObject;
     private TypeTroop typeTroop;
     private PooledObject po;
+    private Animator animator;
     //public HealthBarUI healthBar;
     // /[SerializeField] private bool IsFriendly;
     // /[SerializeField] private bool AoE;
@@ -59,7 +60,10 @@ public class Troop : Destructables
         Physics.IgnoreCollision(player.GetComponent<Collider2D>(), GetComponent<Collider2D>());*/
         Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Ally"), LayerMask.NameToLayer("Ally"));
         Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Enemy"), LayerMask.NameToLayer("Enemy"));
-        
+
+        animator = this.gameObject.GetComponent<Animator>();
+
+
 }
 
 
@@ -93,13 +97,14 @@ public class Troop : Destructables
         this.TroopName = this.typeTroop.getName();
         this.IsFriendly = this.typeTroop.getIsFriendly();
         this.AoE = this.typeTroop.getAoE();
+        //this.animator.runtimeAnimatorController = this.typeTroop.getAnimator();
         
         gameObject.layer = IsFriendly ? LayerMask.NameToLayer("Ally") : LayerMask.NameToLayer("Enemy");
 
-        BoxCollider modifiedCollider = gameObject.GetComponent<BoxCollider>();
+        BoxCollider2D modifiedCollider = gameObject.GetComponent<BoxCollider2D>();
         modifiedCollider.isTrigger = true;
-        modifiedCollider.center = new Vector3(((DamageRange * 0.5f) / 2 + 0.5f) * (IsFriendly ? 1f : -1f), 0.1f, 0);
-        modifiedCollider.size = new Vector3((DamageRange * 0.5f), 1.8f, 1);
+        modifiedCollider.offset = new Vector2(((DamageRange * 0.5f) / 2 + 0.5f) * (IsFriendly ? 1f : -1f), 0.1f);
+        modifiedCollider.size = new Vector2((DamageRange * 0.5f), 1.8f);
     }
 
     public void SetPooledObject(PooledObject po)
@@ -177,7 +182,7 @@ public class Troop : Destructables
     //GameObject collidedTroopPerm;
     // /public List<GameObject> collidedObjects = new List<GameObject>();
     // /float startTimeDoDmg;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         // /
         /*GameObject collidedObj = other.gameObject;
@@ -235,7 +240,7 @@ public class Troop : Destructables
     }
 
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         // /
         /*// Kui meie trigger on teise objekti triggeris, ei tee midagi
@@ -370,7 +375,7 @@ public class Troop : Destructables
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log(getName() + " collided with " + collision.gameObject.name + " With a tag of: " + collision.gameObject.tag);
 

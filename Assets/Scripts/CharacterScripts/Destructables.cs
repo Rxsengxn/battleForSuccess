@@ -84,7 +84,7 @@ public class Destructables : MonoBehaviour
     protected float startTimeDoDmg;
     protected bool startTimeInit;
     // OnTriggerEnter
-    protected virtual void TriggervTrigger(Collider collision)
+    protected virtual void TriggervTrigger(Collider2D collision)
     {
 
         if (Health <= 0) return;
@@ -141,7 +141,7 @@ public class Destructables : MonoBehaviour
         
     }
 
-    protected virtual bool TriggerStay(Collider collision, float DmgFrequency)
+    protected virtual bool TriggerStay(Collider2D collision, float DmgFrequency)
     {
 
         if (Health <= 0) return false;

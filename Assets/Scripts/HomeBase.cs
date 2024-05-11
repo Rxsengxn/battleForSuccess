@@ -7,6 +7,7 @@ public class HomeBase : Destructables
 {
     //public float health;
     public GameObject troop;
+    public Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>();
     //public GameObject troop2;
     //public GameObject enemyBase;
 
@@ -22,6 +23,9 @@ public class HomeBase : Destructables
     
     void Start()
     {
+
+        //sprites = Resources.load<Sprite>("Sprites/Archer*");
+
         this.Health = 1000f;
         this.DamageAmount = 10f;
         this.IsFriendly = true;
@@ -95,12 +99,12 @@ public class HomeBase : Destructables
         }*/
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         base.TriggervTrigger(other);
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         base.TriggerStay(other, 0.5f);
     }
