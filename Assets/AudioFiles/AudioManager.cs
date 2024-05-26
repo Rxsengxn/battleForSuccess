@@ -9,11 +9,6 @@ public class AudioManager : MonoBehaviour
     [field: SerializeField] public AudioMixerGroup MasterSoundGroup { get; private set; }
     [field: SerializeField, Range(0.0001f, 1f)] public float MasterVolume { get; private set; }
 
-    /*public AudioMixerGroup GetAudioMasterGroup()
-    {
-        return masterSoundGroup;
-    }*/
-
     public Audio[] audios;
 
     private void Awake()
@@ -59,10 +54,6 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Audio: " + name + " not found!");
             return;
         }
-        /*if (audio.name == "GameMusic")
-        {
-            audio.source.volume /= 2.5f;
-        }*/
         audio.source.Play();
     }
 

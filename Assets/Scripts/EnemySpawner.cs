@@ -72,17 +72,17 @@ public class EnemySpawner : MonoBehaviour
     private void Update()
     {
         
-        if (spawnEnemyCurve(3f))
+        if (SpawnEnemyCurve(3f))
         {
             // Can only spawn first grade troops
             if (RandomChanceNotToSpawn()) SpawnFirstGradeTroop((int) Random.Range(0, Difficulty));
         }
-        if (spawnEnemyCurve(0.9f))
+        if (SpawnEnemyCurve(0.9f))
         {
             // Can spawn first and second grade troops
             if (RandomChanceNotToSpawn()) SpawnSecondOrFirstGradeTroop((int) Random.Range(0, Difficulty));
         }
-        if (spawnEnemyCurve(0.05f))
+        if (SpawnEnemyCurve(0.05f))
         {
             // Can spawn first, second and third grade troops
             if (RandomChanceNotToSpawn()) SpawnRandomGradeTroop((int) Random.Range(0, (Difficulty*3)));
@@ -97,18 +97,14 @@ public class EnemySpawner : MonoBehaviour
     Dictionary<float, float> timeToSpawnDict = new Dictionary<float, float>();
 
 
-    public bool spawnEnemyCurve(float troopGrade)
+    public bool SpawnEnemyCurve(float troopGrade)
     {
         if (timeToSpawnDict.ContainsKey(troopGrade))
         {
             float tempTime = Time.timeSinceLevelLoad;
-            /*float timeToSpawnNext = Mathf.Pow(tempTime, 2) * (troopGrade)/25;
-            float timeToSpawnPrev = Mathf.Pow(tempTime-Time.deltaTime, 2) * (troopGrade)/25;
-            return Mathf.Floor(timeToSpawnNext) != Mathf.Floor(timeToSpawnPrev);*/
 
             float timeToSpawnNext = Mathf.Floor((Mathf.Pow(tempTime, 1.4f) * troopGrade / 130f)+0.75f);
             bool returnVal = timeToSpawnNext != timeToSpawnDict[troopGrade];
-            //timeToSpawn = timeToSpawnNext;
             timeToSpawnDict[troopGrade] = timeToSpawnNext;
             return returnVal;
         }
@@ -119,18 +115,14 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    /*public bool SpawnEnemyLinear(float troopGrade)
+    public bool SpawnEnemyLinear(float troopGrade)
     {
         if (timeToSpawnDict.ContainsKey(troopGrade))
         {
             float tempTime = Time.timeSinceLevelLoad;
-            *//*float timeToSpawnNext = Mathf.Pow(tempTime, 2) * (troopGrade)/25;
-            float timeToSpawnPrev = Mathf.Pow(tempTime-Time.deltaTime, 2) * (troopGrade)/25;
-            return Mathf.Floor(timeToSpawnNext) != Mathf.Floor(timeToSpawnPrev);*//*
 
-            float timeToSpawnNext = Mathf.Floor((Mathf.Pow(tempTime, 1.4f) * troopGrade / 200f));
+            float timeToSpawnNext = Mathf.Floor(tempTime * (troopGrade*10f));
             bool returnVal = timeToSpawnNext != timeToSpawnDict[troopGrade];
-            //timeToSpawn = timeToSpawnNext;
             timeToSpawnDict[troopGrade] = timeToSpawnNext;
             return returnVal;
         }
@@ -139,5 +131,5 @@ public class EnemySpawner : MonoBehaviour
             timeToSpawnDict.Add(troopGrade, Time.timeSinceLevelLoad);
             return false;
         }
-    }*/
+    }
 }

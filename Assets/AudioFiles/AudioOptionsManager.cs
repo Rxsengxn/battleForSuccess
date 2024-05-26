@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class AudioOptionsManager : MonoBehaviour
 {
-    //public static float masterVolume { get; private set; }
-
     public void OnSliderValueChange(float value)
     {
         AudioManager.Instance.UpdateMixerVolume(value);

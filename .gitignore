@@ -70,3 +70,13 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# user defined
+/ClassDiagram3.cd
+/ClassDiagram2.cd
+/ClassDiagram1.cd
+# /BattleForSuccess_v0_4_BurstDebugInformation_DoNotShip/tempburstlibs/armeabi-v7a
+/BattleForSuccess_v0*/
+
+/Assets/VOiD1 Gaming
+/Assets/VOiD1 Gaming.meta
