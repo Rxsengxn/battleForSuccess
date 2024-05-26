@@ -17,7 +17,7 @@ public class Pool
     public Pool(GameObject prefab, int count, TypeTroop typeTroop)
     {
         pool = new List<PooledObject>();
-        objectPool = new GameObject("ObjectPool " + typeTroop.getName());
+        objectPool = new GameObject("ObjectPool " + typeTroop.TroopName);
         this.prefab = prefab;
         this.count = count;
         this.typeTroop = typeTroop;
@@ -34,6 +34,7 @@ public class Pool
             Debug.Log($"There was no more objects in the pool so 10 new {prefab.name} objects were made.");
 
             AddNewObjects(count, 10);
+            this.count += 10;
         }
 
         //If the index of the pointer is between the list's elements, revive next and return it.
@@ -47,26 +48,32 @@ public class Pool
                 return po;
             }
         }
-        else throw new System.Exception("There are no more pooled objects to revive!");
+        else throw new System.Exception("There are no more pooled objects to revive!\nindex was: " + index.ToString() + " and pool count was: " + pool.Count.ToString());
 
         return null;
     }
 
     public void KillPooledObject(PooledObject po)
     {
-        if (index > -1)
+        if (index > 0)
         {
             po.Kill();
-            //If the po is not the first, swap this po's place with the next dead object's
-            //to keep the structure of the pool.
-            if (index > 0)
+            Debug.Log("Killed: " + po.go.name + " index: " + index.ToString());
+            int i = pool.IndexOf(po);
+            if (i != -1)
             {
-                PooledObject temp = po;
-                PooledObject temp2 = pool[index - 1];
-                pool[pool.IndexOf(po)] = temp2;
-                pool[index - 1] = temp;
+                //If the po is not the first, swap this po's place with the next dead object's
+                //to keep the structure of the pool.
+                if (index > 1)
+                {
+                    PooledObject temp = po;
+                    PooledObject temp2 = pool[index - 1];
+                    pool[pool.IndexOf(po)] = temp2;
+                    pool[index - 1] = temp;
+                }
+                index--;
             }
-            index--;
+            else Debug.LogWarning("The object you are trying to kill has already been killed!!");
         }
         else throw new System.Exception("There are no more pooled objects to kill!");
         return;
@@ -85,7 +92,7 @@ public class Pool
             go.GetComponent<Troop>().SetPooledObject(po);
             po.Kill();
             go.transform.SetParent(objectPool.transform);
-            go.name = typeTroop.getName() + " no: " + (i).ToString();
+            go.name = typeTroop.TroopName + " no: " + (i).ToString();
             pool.Add(po);
 
         }

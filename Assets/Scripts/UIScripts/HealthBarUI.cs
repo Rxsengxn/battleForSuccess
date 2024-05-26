@@ -20,7 +20,10 @@ public class HealthBarUI : MonoBehaviour
 
         fill.color = gradient.Evaluate(1f);
 
-        healthText.text = "HP: " + health.ToString();
+        if (healthText != null)
+            healthText.text = "HP: " + health.ToString();
+
+        //healthText.text = "HP: " + health.ToString();
     }
 
     public void SetHealth(float health)
@@ -28,7 +31,8 @@ public class HealthBarUI : MonoBehaviour
         slider.value = health;
 
         fill.color = gradient.Evaluate(slider.normalizedValue);
-        healthText.text = "HP: " + health.ToString();
-    }
 
+        if (healthText != null) healthText.text = "HP: " + health.ToString();
+        //healthText.text = "HP: " + health.ToString();
+    }
 }

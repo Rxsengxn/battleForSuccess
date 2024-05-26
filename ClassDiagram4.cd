@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="QuitGame">
+    <Position X="17.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\ButtonScripts\QuitGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReloadButton">
+    <Position X="27.5" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ButtonScripts\ReloadButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Base">
+    <Position X="1.75" Y="13.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAAAAgAAAAAAAAAEAAAAAIAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DestructableScripts\Base.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Destructables">
+    <Position X="7" Y="6.25" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>BBAICAAAECAQAAIQwAAAIAEAQYgAAAAAAAgAhAAwBEA=</HashCode>
+      <FileName>Assets\Scripts\DestructableScripts\Destructables.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Troop">
+    <Position X="5.5" Y="13.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAAECBAAAAAEAAAEgACAECAAAAIAEAggACAAEA=</HashCode>
+      <FileName>Assets\Scripts\DestructableScripts\Troop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TypeTroop">
+    <Position X="73" Y="2.75" Width="12.5" />
+    <TypeIdentifier>
+      <HashCode>ABAACQAAAACAAAAQAAAAAhAAQQIJAAAAAgAAAACAEAA=</HashCode>
+      <FileName>Assets\Scripts\DestructableScripts\TypeTroop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pool">
+    <Position X="71.25" Y="11.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>ABAAAIAAAAAAAAAEBABgAAIAAAAAAAAAAAgAAAQBAAA=</HashCode>
+      <FileName>Assets\Scripts\ObjectPool\Pool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PooledObject">
+    <Position X="75.5" Y="11.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAgAABAAA=</HashCode>
+      <FileName>Assets\Scripts\ObjectPool\PooledObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pools">
+    <Position X="41.5" Y="6.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIQEACAAAAgAAAggAAAAAAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\ObjectPool\Pools.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthBarUI">
+    <Position X="34" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEIAQAAAAAAAAAAAAAAAAAgEAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIScripts\HealthBarUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TroopButtons">
+    <Position X="19.5" Y="6.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AABAhAAAAAAAAAAAgAAAAAAAAAAAAgAAAABAAAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIScripts\TroopButtons.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySpawner">
+    <Position X="23" Y="6.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAiAABQAAggAAAAEAAAAAQAAAAAAAACAABIA=</HashCode>
+      <FileName>Assets\Scripts\EnemySpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager" BaseTypeListCollapsed="true">
+    <Position X="30.25" Y="6.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AIQIIAAEASgAUQAAJAEJQgAiAAAAAgCgUAAAIAAAgME=</HashCode>
+      <FileName>Assets\Scripts\GameManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MainMenuManager">
+    <Position X="50.5" Y="6.25" Width="13" />
+    <TypeIdentifier>
+      <HashCode>EAAAMAAAIAAAAQAABAIABAAAAABAAACAAAAAAQAAAGA=</HashCode>
+      <FileName>Assets\Scripts\MainMenuManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerData">
+    <Position X="68" Y="11.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAIAAAAEAQAAAAAAAAAAAAAAAAQAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Spawner">
+    <Position X="37.25" Y="6.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAgAAAAAAgAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Scripts\Spawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Throwable">
+    <Position X="46.75" Y="6.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAIAAAEAAAAAAAAAEQAAAAIAAABAAAACBA=</HashCode>
+      <FileName>Assets\Scripts\Throwable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TroopClassParams">
+    <Position X="64.5" Y="7.75" Width="11.25" />
+    <TypeIdentifier>
+      <HashCode>ABAACQAAAAAAAAAAAAAAAhQAQQAAAAAAABAAAIAAAEA=</HashCode>
+      <FileName>Assets\Scripts\TroopClassParams.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyBase">
+    <Position X="9.5" Y="13.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACBAAAAgAAAAAAAAAEAAAAAIAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\vbDelet\EnemyBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HomeBase">
+    <Position X="13.5" Y="13.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACBAAAAgAAAAAAAAAEAAAAAIAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\vbDelet\HomeBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.MonoBehaviour">
+    <Position X="30.25" Y="0.5" Width="4.75" />
+    <TypeIdentifier />
+  </Class>
+  <Struct Name="ConcreteConst">
+    <Position X="64.75" Y="2.75" Width="8" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAEBBAAABAAAQIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\TroopClassParams.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="IObserver">
+    <Position X="61.25" Y="11.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ObserverPattern\IObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ISubject">
+    <Position X="65.5" Y="11.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAIAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\ObserverPattern\ISubject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -57,6 +57,7 @@ public class Pools : MonoBehaviour
         //Debug.Log("Enne reive: " + pools[prefab].ToString());
         PooledObject po = pools[typeTroop].GetPooledObject();
         po.go.GetComponent<Troop>().SetTroopType(typeTroop);
+        po.go.GetComponent<Troop>().Attach(GameManager.Instance);
         //Debug.Log("Peale revive: " + pools[prefab].ToString());
         return po;
     }
@@ -77,14 +78,14 @@ public class Pools : MonoBehaviour
             Debug.Log("Key " + key.getName());
         }*/
 
-        TypeTroop troopKey = po.go.GetComponent<Troop>().getTypeTroop();
+        TypeTroop troopKey = po.go.GetComponent<Troop>().TypeofTroop;
 
         //Debug.Log(pools.Keys.ToString());
 
 
         //Debug.Log(troopKey.getName().ToString());
 
-
+        po.go.GetComponent<Troop>().Detach(GameManager.Instance);
         po.go.transform.parent = pools[troopKey].objectPool.transform;
         po.go.transform.position = pools[troopKey].objectPool.transform.position;
 
